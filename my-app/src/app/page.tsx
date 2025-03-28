@@ -26,7 +26,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import NetworkBackground from "@/components/network-background";
 
 export default function Home() {
-	const [setMousePosition] = useState({ x: 0, y: 0 });
+	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+	console.log(
+		"🧑‍💻 page.tsx|:29|mousePosition👉",
+		JSON.stringify(mousePosition, null, 2),
+		"👈 🛑"
+	);
 
 	useEffect(() => {
 		const handleMouseMove = (e: MouseEvent) => {
